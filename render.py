@@ -141,7 +141,7 @@ def render_index(bundle, briefs):
 
     body = [
         '<section class="hero">',
-        '<p class="mono dim small">Toronto &middot; 35 homes &middot; 542 published inspections &middot; every home has findings</p>',
+        '<p class="mono dim small">Toronto &middot; 35 homes &middot; 542 inspections &middot; findings in all of them</p>',
         '<h2>Nobody gets an A.</h2>',
         '<p>The ministry has published <strong class="mono">542 inspection reports</strong> for Toronto&rsquo;s '
         f'<strong class="mono">35</strong> long-term care homes. {sum(1 for h in homes if h["notifications"]>0)} of them '

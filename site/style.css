@@ -168,6 +168,12 @@ tr.hidden { display: none; }
 
 .back { margin-top: 40px; }
 
+/* Dark scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2a3240; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #39445a; }
+
 /* Footer */
 .footer { margin-top: 60px; border-top: 1px solid var(--rule); color: var(--dim); }
 .footer .wrap { padding-top: 18px; padding-bottom: 40px; }
