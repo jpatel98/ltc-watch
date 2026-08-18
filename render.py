@@ -108,7 +108,9 @@ def render_index(bundle, briefs):
 
     body.append('<h4 class="rulehead">Most-cited sections of the Fixing Long-Term Care Act, 2021</h4>')
     body.append("<ul class=\"meetlist\">")
-    for s, n in bundle["sections"][:12]:
+    # s.154(1) is the enforcement boilerplate on every notification; skip it
+    cited = [x for x in bundle["sections"] if x[0] != "154 (1)"]
+    for s, n in cited[:12]:
         body.append(f'<li>s. {esc(s)} &mdash; cited {n} times</li>')
     body.append("</ul>")
     return layout("Rankings — " + SITE, "\n".join(body), "home")
